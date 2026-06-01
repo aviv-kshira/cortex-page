@@ -734,15 +734,15 @@
     // The field order from your form PDF:
     // entry for Full Name, entry for Market, entry for Scale, entry for Function,
     // entry for Metric Categories (one param per selection), entry for free text.
-    params.append('entry.NAME_ID', name);
-    params.append('entry.EMAIL_ID', email);
-    params.append('entry.MARKET_ID', market);
-    params.append('entry.SCALE_ID', scaleVal);
-    params.append('entry.FUNCTION_ID', func);
+    params.append('entry.11420490', name);
+    params.append('entry.emailAddress', email);
+    params.append('entry.1016381345', market);
+    params.append('entry.1704523167', scaleVal);
+    params.append('entry.1884328624', func);
     checkedItems.forEach(function(item) {
-      params.append('entry.METRICS_ID', item);
+      params.append('entry.1935049553', item);
     });
-    if (freetext) params.append('entry.FREETEXT_ID', freetext);
+    if (freetext) params.append('entry.933871549', freetext);
 
     // Open the actual Google Form as a fallback to ensure data is captured
     window.open('https://forms.gle/jvfgCrsPw8Xfhp826', '_blank');
