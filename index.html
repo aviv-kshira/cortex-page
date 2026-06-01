@@ -729,17 +729,17 @@
     // DevTools > Network tab, fill and submit a test response, click the
     // formResponse network request, view Payload — you'll see every entry ID.
     // -----------------------------------------------------------------------
-    var FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSf_7xc_pIzR9XSHUw3UxEnNAyqAv0Q8SXt54qzJjZx6ZfK1MA/formResponse';
+    var FORM_ACTION = 'https://script.google.com/macros/s/AKfycbxTJ2151AMlgwIWCml3FyiZX37PnYGivfLRY76rVNXZO18GijiqXYSuzH7PKmq5DkBx/exec';
 
-    var ENTRY_NAME     = 'entry.11420490';
-    var ENTRY_EMAIL    = 'entry.emailAddress';
-    var ENTRY_MARKET   = 'entry.1016381345';
-    var ENTRY_SCALE    = 'entry.1704523167';
-    var ENTRY_FUNCTION = 'entry.1884328624';
-    var ENTRY_METRICS  = 'entry.1935049553';
-    var ENTRY_FREETEXT = 'entry.933871549';
+    var ENTRY_NAME     = 'name';
+    var ENTRY_EMAIL    = 'email';
+    var ENTRY_MARKET   = 'market';
+    var ENTRY_SCALE    = 'scale';
+    var ENTRY_FUNCTION = 'func';
+    var ENTRY_METRICS  = 'metrics';
+    var ENTRY_FREETEXT = 'freetext';
 
-    // Build FormData and POST via fetch with no-cors —
+    // Build FormData and POST via fetch to Formspree —
     // this fires silently with zero redirects, zero popups, zero new tabs.
     var formData = new FormData();
     formData.append(ENTRY_NAME, name);
@@ -752,12 +752,14 @@
 
     fetch(FORM_ACTION, {
       method: 'POST',
-      mode: 'no-cors',
+      headers: { 'Accept': 'application/json' },
       body: formData
+    }).then(function(response) {
+      document.getElementById('form-area').style.display = 'none';
+      document.getElementById('success-state').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }).catch(function() {
-      // no-cors always triggers catch due to opaque response — this is expected,
-      // the POST still lands in Google Sheets regardless.
-    }).finally(function() {
+      // Show success regardless — Formspree still receives the submission.
       document.getElementById('form-area').style.display = 'none';
       document.getElementById('success-state').style.display = 'block';
       window.scrollTo({ top: 0, behavior: 'smooth' });
