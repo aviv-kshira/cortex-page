@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
   :root {
     --gold: #c4a064;
     --gold-light: #d4b078;
@@ -25,9 +25,9 @@
     --border-mid: rgba(240,236,228,0.14);
     --error: rgba(220,80,80,0.5);
   }
-
+ 
   html { scroll-behavior: smooth; }
-
+ 
   body {
     background: var(--bg);
     color: var(--text);
@@ -36,7 +36,7 @@
     min-height: 100vh;
     overflow-x: hidden;
   }
-
+ 
   /* ambient glow */
   body::before {
     content: '';
@@ -50,7 +50,7 @@
     pointer-events: none;
     z-index: 0;
   }
-
+ 
   /* ---- LAYOUT ---- */
   .page {
     position: relative;
@@ -59,7 +59,7 @@
     margin: 0 auto;
     padding: 72px 32px 96px;
   }
-
+ 
   /* ---- HEADER ---- */
   .site-header {
     font-size: 10px;
@@ -69,7 +69,7 @@
     margin-bottom: 52px;
     font-weight: 400;
   }
-
+ 
   .badge {
     display: inline-flex;
     align-items: center;
@@ -85,7 +85,7 @@
     margin-bottom: 36px;
     font-weight: 400;
   }
-
+ 
   .badge-dot {
     width: 5px;
     height: 5px;
@@ -93,12 +93,12 @@
     background: var(--gold);
     animation: pulse 2.2s ease-in-out infinite;
   }
-
+ 
   @keyframes pulse {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.25; }
   }
-
+ 
   h1 {
     font-family: 'Playfair Display', serif;
     font-size: clamp(40px, 7vw, 56px);
@@ -108,12 +108,12 @@
     color: var(--text);
     margin-bottom: 6px;
   }
-
+ 
   h1 em {
     font-style: italic;
     color: var(--gold);
   }
-
+ 
   .sub {
     font-size: 16px;
     font-weight: 300;
@@ -122,14 +122,14 @@
     margin-bottom: 44px;
     max-width: 500px;
   }
-
+ 
   .rule {
     width: 36px;
     height: 0.5px;
     background: var(--gold-border);
     margin-bottom: 40px;
   }
-
+ 
   /* ---- STATS ROW ---- */
   .stats {
     display: flex;
@@ -137,9 +137,9 @@
     margin-bottom: 52px;
     align-items: center;
   }
-
+ 
   .stat { text-align: left; }
-
+ 
   .stat-num {
     font-family: 'Playfair Display', serif;
     font-size: 26px;
@@ -147,7 +147,7 @@
     line-height: 1;
     margin-bottom: 4px;
   }
-
+ 
   .stat-lbl {
     font-size: 10px;
     font-weight: 400;
@@ -155,7 +155,7 @@
     text-transform: uppercase;
     letter-spacing: 0.1em;
   }
-
+ 
   .stat-sep {
     width: 0.5px;
     height: 30px;
@@ -163,7 +163,7 @@
     margin: 0 24px;
     flex-shrink: 0;
   }
-
+ 
   /* ---- CAPABILITIES ---- */
   .cap-label {
     font-size: 10px;
@@ -173,9 +173,9 @@
     margin-bottom: 16px;
     font-weight: 400;
   }
-
+ 
   .caps { margin-bottom: 52px; }
-
+ 
   .cap-item {
     display: flex;
     gap: 14px;
@@ -183,9 +183,9 @@
     padding: 16px 0;
     border-bottom: 0.5px solid var(--border);
   }
-
+ 
   .cap-item:first-of-type { border-top: 0.5px solid var(--border); }
-
+ 
   .cap-icon {
     width: 30px;
     height: 30px;
@@ -198,12 +198,12 @@
     flex-shrink: 0;
     margin-top: 1px;
   }
-
+ 
   .cap-icon svg { width: 14px; height: 14px; stroke: var(--gold); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-
+ 
   .cap-title { font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 3px; }
   .cap-desc { font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.55; }
-
+ 
   /* ---- FORM ---- */
   .form-label-section {
     font-size: 10px;
@@ -213,18 +213,18 @@
     margin-bottom: 20px;
     font-weight: 400;
   }
-
+ 
   .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     margin-bottom: 10px;
   }
-
+ 
   .form-row.single { grid-template-columns: 1fr; }
-
+ 
   .field-wrap { display: flex; flex-direction: column; gap: 0; }
-
+ 
   .cx-input, .cx-select {
     background: rgba(255,255,255,0.03);
     border: 0.5px solid var(--border-mid);
@@ -240,16 +240,16 @@
     -webkit-appearance: none;
     appearance: none;
   }
-
+ 
   .cx-input::placeholder { color: var(--text-dim); }
-
+ 
   .cx-input:focus, .cx-select:focus {
     border-color: rgba(196,160,100,0.45);
     background: rgba(196,160,100,0.03);
   }
-
+ 
   .cx-input.error { border-color: var(--error); }
-
+ 
   .cx-select {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(240,236,228,0.3)' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
@@ -257,10 +257,10 @@
     padding-right: 36px;
     cursor: pointer;
   }
-
+ 
   .cx-select option { background: #1a1a1a; color: var(--text); }
   .cx-select.placeholder { color: var(--text-dim); }
-
+ 
   /* scale */
   .scale-wrap {
     background: rgba(255,255,255,0.03);
@@ -269,7 +269,7 @@
     padding: 16px;
     margin-bottom: 10px;
   }
-
+ 
   .scale-question {
     font-size: 13px;
     font-weight: 300;
@@ -277,25 +277,25 @@
     margin-bottom: 14px;
     line-height: 1.5;
   }
-
+ 
   .scale-question span { color: rgba(196,160,100,0.7); font-size: 11px; margin-left: 4px; }
-
+ 
   .scale-options {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 6px;
   }
-
+ 
   .scale-end {
     font-size: 11px;
     color: var(--text-dim);
     white-space: nowrap;
     flex-shrink: 0;
   }
-
+ 
   .scale-btns { display: flex; gap: 6px; flex: 1; justify-content: center; }
-
+ 
   .scale-btn {
     width: 36px;
     height: 36px;
@@ -312,10 +312,10 @@
     align-items: center;
     justify-content: center;
   }
-
+ 
   .scale-btn:hover { border-color: var(--gold-border); color: var(--gold); }
   .scale-btn.selected { background: var(--gold-dim); border-color: var(--gold); color: var(--gold); font-weight: 500; }
-
+ 
   /* checkboxes */
   .checkbox-wrap {
     background: rgba(255,255,255,0.03);
@@ -324,7 +324,7 @@
     padding: 14px 16px;
     margin-bottom: 10px;
   }
-
+ 
   .checkbox-question {
     font-size: 13px;
     font-weight: 300;
@@ -332,9 +332,9 @@
     margin-bottom: 12px;
     line-height: 1.5;
   }
-
+ 
   .checkbox-question span { color: rgba(196,160,100,0.7); font-size: 11px; margin-left: 4px; }
-
+ 
   .checkbox-item {
     display: flex;
     align-items: center;
@@ -343,10 +343,10 @@
     border-bottom: 0.5px solid var(--border);
     cursor: pointer;
   }
-
+ 
   .checkbox-item:last-child { border-bottom: none; padding-bottom: 0; }
   .checkbox-item:first-of-type { padding-top: 0; }
-
+ 
   .cx-checkbox {
     width: 16px;
     height: 16px;
@@ -359,12 +359,12 @@
     justify-content: center;
     transition: all 0.15s;
   }
-
+ 
   .cx-checkbox.checked {
     background: var(--gold-dim);
     border-color: var(--gold);
   }
-
+ 
   .cx-checkbox.checked::after {
     content: '';
     width: 8px;
@@ -374,9 +374,9 @@
     transform: rotate(-45deg) translateY(-1px);
     display: block;
   }
-
+ 
   .checkbox-label { font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.4; }
-
+ 
   /* textarea */
   .cx-textarea {
     background: rgba(255,255,255,0.03);
@@ -394,10 +394,10 @@
     outline: none;
     line-height: 1.6;
   }
-
+ 
   .cx-textarea::placeholder { color: var(--text-dim); }
   .cx-textarea:focus { border-color: rgba(196,160,100,0.45); background: rgba(196,160,100,0.03); }
-
+ 
   /* submit */
   .cx-btn {
     width: 100%;
@@ -415,11 +415,11 @@
     transition: all 0.2s;
     margin-top: 8px;
   }
-
+ 
   .cx-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
   .cx-btn:active { transform: translateY(0); }
   .cx-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
-
+ 
   .fine-print {
     font-size: 12px;
     font-weight: 300;
@@ -428,7 +428,7 @@
     margin-top: 14px;
     text-align: center;
   }
-
+ 
   /* promise block */
   .promise {
     display: flex;
@@ -440,20 +440,20 @@
     border: 0.5px solid var(--gold-border);
     border-radius: 10px;
   }
-
+ 
   .promise-icon { color: var(--gold); flex-shrink: 0; margin-top: 1px; }
   .promise-icon svg { width: 16px; height: 16px; stroke: var(--gold); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-
+ 
   .promise-text { font-size: 13px; font-weight: 300; color: var(--text-muted); line-height: 1.6; }
   .promise-text strong { color: rgba(240,236,228,0.75); font-weight: 500; }
-
+ 
   /* success state */
   #success-state {
     display: none;
     text-align: center;
     padding: 60px 20px;
   }
-
+ 
   .success-icon {
     width: 56px;
     height: 56px;
@@ -465,9 +465,9 @@
     justify-content: center;
     margin: 0 auto 24px;
   }
-
+ 
   .success-icon svg { width: 22px; height: 22px; stroke: var(--gold); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-
+ 
   .success-title {
     font-family: 'Playfair Display', serif;
     font-size: 28px;
@@ -475,7 +475,7 @@
     color: var(--text);
     margin-bottom: 12px;
   }
-
+ 
   .success-sub {
     font-size: 15px;
     font-weight: 300;
@@ -484,7 +484,7 @@
     max-width: 420px;
     margin: 0 auto;
   }
-
+ 
   /* error message */
   .error-msg {
     font-size: 12px;
@@ -492,7 +492,7 @@
     margin-top: 8px;
     display: none;
   }
-
+ 
   @media (max-width: 520px) {
     .page { padding: 52px 20px 72px; }
     .form-row { grid-template-columns: 1fr; }
@@ -502,21 +502,21 @@
 </style>
 </head>
 <body>
-
+ 
 <div class="page">
-
+ 
   <div class="site-header">AVIV &nbsp;|&nbsp; CDAO &nbsp;|&nbsp; Data, Analytics and AI</div>
-
+ 
   <div class="badge">
     <span class="badge-dot"></span>
     Early access &nbsp;&middot;&nbsp; Limited seats
   </div>
-
+ 
   <h1>Meet <em>Cortex.</em><br>Your intelligence layer.</h1>
   <p class="sub">A new way to understand our business. Cortex surfaces the metrics that matter and helps you move from gut feel to grounded decisions. Built on Snowflake.</p>
-
+ 
   <div class="rule"></div>
-
+ 
   <div class="stats">
     <div class="stat">
       <div class="stat-num">3</div>
@@ -533,10 +533,10 @@
       <div class="stat-lbl">Capability</div>
     </div>
   </div>
-
+ 
   <div class="caps">
     <div class="cap-label">What Cortex does today</div>
-
+ 
     <div class="cap-item">
       <div class="cap-icon">
         <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
@@ -546,7 +546,7 @@
         <div class="cap-desc">Track top-level metrics across any region, segment, and time frame. Everything Cockpit and Steering gave you, in one place.</div>
       </div>
     </div>
-
+ 
     <div class="cap-item">
       <div class="cap-icon">
         <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
@@ -556,7 +556,7 @@
         <div class="cap-desc">Go beyond the number. Cortex surfaces what is moving the needle so you can ask smarter questions and act faster.</div>
       </div>
     </div>
-
+ 
     <div class="cap-item">
       <div class="cap-icon">
         <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
@@ -567,16 +567,16 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- FORM -->
   <div id="form-area">
     <div class="form-label-section">Request access</div>
-
+ 
     <div class="form-row">
       <input class="cx-input" type="text" id="f-name" placeholder="Full name" autocomplete="name" />
       <input class="cx-input" type="email" id="f-email" placeholder="Work email" autocomplete="email" />
     </div>
-
+ 
     <div class="form-row single">
       <select class="cx-select placeholder" id="f-market" onchange="this.classList.remove('placeholder')">
         <option value="" disabled selected>Your market</option>
@@ -586,7 +586,7 @@
         <option value="AVIV Group - Cross Market">AVIV Group &mdash; Cross Market</option>
       </select>
     </div>
-
+ 
     <div class="form-row single">
       <select class="cx-select placeholder" id="f-function" onchange="this.classList.remove('placeholder')">
         <option value="" disabled selected>Your function</option>
@@ -600,7 +600,7 @@
         <option value="Other">Other</option>
       </select>
     </div>
-
+ 
     <div class="scale-wrap">
       <div class="scale-question">How frequently do you currently rely on data dashboards or reporting tools for decision-making? <span>*</span></div>
       <div class="scale-options">
@@ -615,7 +615,7 @@
         <span class="scale-end">Very frequently</span>
       </div>
     </div>
-
+ 
     <div class="checkbox-wrap">
       <div class="checkbox-question">Which metric categories are most critical for your role? <span>* Select all that apply</span></div>
       <div class="checkbox-item" onclick="toggleCheck(this, 'Financial Performance (Revenue, P&L)')">
@@ -639,17 +639,17 @@
         <span class="checkbox-label">Market Share &amp; Growth</span>
       </div>
     </div>
-
+ 
     <div class="form-row single">
       <textarea class="cx-textarea" id="f-freetext" placeholder="What would you most want Cortex to answer? (optional)" rows="3"></textarea>
     </div>
-
+ 
     <div id="error-msg" class="error-msg">Please fill in your name, email, market, function, and frequency rating before submitting.</div>
-
+ 
     <button class="cx-btn" id="submit-btn" onclick="handleSubmit()">Request my seat &rarr;</button>
-
+ 
     <p class="fine-print">Access is granted in waves based on prioritisation and country leader input. You will receive a personal onboarding message when your seat is ready.</p>
-
+ 
     <div class="promise">
       <div class="promise-icon">
         <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -657,7 +657,7 @@
       <div class="promise-text"><strong>When your access lands, it arrives properly.</strong> Expect a personalised message, onboarding videos, and a guided tour built for your specific role and market. No cold logins. No guessing.</div>
     </div>
   </div>
-
+ 
   <!-- SUCCESS -->
   <div id="success-state">
     <div class="success-icon">
@@ -666,20 +666,20 @@
     <div class="success-title">You're on the list.</div>
     <p class="success-sub">We've noted your request. When your seat is ready, you'll receive a personal message with everything you need to get started.<br><br>Good things come to those who know what they're measuring.</p>
   </div>
-
+ 
 </div>
-
+ 
 <script>
   var scaleVal = 0;
   var checkedItems = [];
-
+ 
   function selectScale(n) {
     scaleVal = n;
     for (var i = 1; i <= 5; i++) {
       document.getElementById('scale-' + i).classList.toggle('selected', i === n);
     }
   }
-
+ 
   function toggleCheck(el, val) {
     var box = el.querySelector('.cx-checkbox');
     var idx = checkedItems.indexOf(val);
@@ -691,63 +691,87 @@
       box.classList.add('checked');
     }
   }
-
+ 
   function handleSubmit() {
     var name = document.getElementById('f-name').value.trim();
     var email = document.getElementById('f-email').value.trim();
     var market = document.getElementById('f-market').value;
     var func = document.getElementById('f-function').value;
     var errMsg = document.getElementById('error-msg');
-
+ 
     var valid = true;
-
+ 
     if (!name) { document.getElementById('f-name').classList.add('error'); valid = false; }
     else { document.getElementById('f-name').classList.remove('error'); }
-
+ 
     if (!email || !/\S+@\S+\.\S+/.test(email)) { document.getElementById('f-email').classList.add('error'); valid = false; }
     else { document.getElementById('f-email').classList.remove('error'); }
-
+ 
     if (!market || !func || scaleVal === 0) { valid = false; }
-
+ 
     if (!valid) {
       errMsg.style.display = 'block';
       return;
     }
-
+ 
     errMsg.style.display = 'none';
-
+ 
     var btn = document.getElementById('submit-btn');
     btn.disabled = true;
     btn.textContent = 'Submitting...';
-
-    // Build the pre-fill Google Form URL and open it silently via a hidden iframe,
-    // then show success. The form URL captures all responses in your Google Sheet.
+ 
     var freetext = document.getElementById('f-freetext').value.trim();
-    var formBase = 'https://docs.google.com/forms/d/e/1FAIpQLSf_jvfgCrsPw8Xfhp826/formResponse';
-
-    // Redirect to the real Google Form in a new tab so the submission is recorded,
-    // while showing the branded success screen on this page immediately.
-    var params = new URLSearchParams();
-    // NOTE FOR SETUP: Replace the entry.XXXXXXX values below with your actual
-    // Google Form entry IDs. To find them: open your form, right-click each field
-    // in preview mode, Inspect Element, look for name="entry.XXXXXXX".
-    // The field order from your form PDF:
-    // entry for Full Name, entry for Market, entry for Scale, entry for Function,
-    // entry for Metric Categories (one param per selection), entry for free text.
-    params.append('entry.11420490', name);
-    params.append('entry.emailAddress', email);
-    params.append('entry.1016381345', market);
-    params.append('entry.1704523167', scaleVal);
-    params.append('entry.1884328624', func);
-    checkedItems.forEach(function(item) {
-      params.append('entry.1935049553', item);
-    });
-    if (freetext) params.append('entry.933871549', freetext);
-
-    // Open the actual Google Form as a fallback to ensure data is captured
-    window.open('https://forms.gle/jvfgCrsPw8Xfhp826', '_blank');
-
-    // Show success immediately on this page
+ 
+    // -----------------------------------------------------------------------
+    // SILENT IFRAME POST TO GOOGLE FORMS
+    // Replace the entry.XXXXXXXXXX values below with your real entry IDs.
+    // How to find them: open https://forms.gle/jvfgCrsPw8Xfhp826, open
+    // DevTools > Network tab, fill and submit a test response, click the
+    // formResponse network request, view Payload — you'll see every entry ID.
+    // -----------------------------------------------------------------------
+    var FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSf_7xc_pIzR9XSHUw3UxEnNAyqAv0Q8SXt54qzJjZx6ZfK1MA/formResponse';
+ 
+    var ENTRY_NAME     = 'entry.11420490';
+    var ENTRY_EMAIL    = 'entry.emailAddress';
+    var ENTRY_MARKET   = 'entry.1016381345';
+    var ENTRY_SCALE    = 'entry.1704523167';
+    var ENTRY_FUNCTION = 'entry.1884328624';
+    var ENTRY_METRICS  = 'entry.1935049553';
+    var ENTRY_FREETEXT = 'entry.933871549';
+ 
+    // Build a hidden form and submit it into a hidden iframe —
+    // this fires the POST to Google without navigating or opening any tab.
+    var iframe = document.createElement('iframe');
+    iframe.name = 'hidden-submit-target';
+    iframe.style.cssText = 'display:none;width:0;height:0;border:none;position:absolute;';
+    document.body.appendChild(iframe);
+ 
+    var hiddenForm = document.createElement('form');
+    hiddenForm.method = 'POST';
+    hiddenForm.action = FORM_ACTION;
+    hiddenForm.target = 'hidden-submit-target';
+    hiddenForm.style.display = 'none';
+ 
+    function addField(n, v) {
+      var i = document.createElement('input');
+      i.type = 'hidden';
+      i.name = n;
+      i.value = v;
+      hiddenForm.appendChild(i);
+    }
+ 
+    addField(ENTRY_NAME, name);
+    addField(ENTRY_EMAIL, email);
+    addField(ENTRY_MARKET, market);
+    addField(ENTRY_SCALE, scaleVal);
+    addField(ENTRY_FUNCTION, func);
+    checkedItems.forEach(function(item) { addField(ENTRY_METRICS, item); });
+    if (freetext) addField(ENTRY_FREETEXT, freetext);
+ 
+    document.body.appendChild(hiddenForm);
+    hiddenForm.submit();
+ 
+    // Show the branded success screen immediately — no redirect, no new tab.
     setTimeout(function() {
       document.getElementById('form-area').style.display = 'none';
       document.getElementById('success-state').style.display = 'block';
@@ -755,6 +779,7 @@
     }, 400);
   }
 </script>
-
+ 
 </body>
 </html>
+ 
